@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./brick.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="height: 500px;width:800px" id="test"></div>
+    <script>
+      var wrapper = document.getElementById('test');
+      var dataModel = new brick.DataModel()
+      var graphView = new brick.GraphView(dataModel);
+      graphView.addToDOM(wrapper);
+
+      var data = new brick.Data({
+        left: 300,
+        top: 300,
+        width: 100,
+        height: 100
+      });
+      dataModel.add(data);
+    </script>
+  </body>
+</html>
