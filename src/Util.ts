@@ -5,3 +5,9 @@ export function getSize(element: HTMLElement) {
     height: rect.height
   };
 }
+
+let id = 1;
+
+export function generateId() {
+  return id++;
+}
